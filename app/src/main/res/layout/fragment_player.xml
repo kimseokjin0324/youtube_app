@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fastcampus.aop.part3.chapter01.CustomMotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/playerMotionLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -20,6 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
+        tools:src = "@drawable/baseline_play_arrow_24"
         app:layout_constraintBottom_toBottomOf="@id/mainContainerLayout"
         app:layout_constraintEnd_toEndOf="@id/mainContainerLayout"
         app:layout_constraintTop_toTopOf="@id/mainContainerLayout" />
@@ -39,6 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="12dp"
+        tools:text="제목입니다."
         android:ellipsize="end"
         android:maxLines="1"
         android:singleLine="true"
