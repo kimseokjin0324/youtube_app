@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fastcampus.aop.part3.chapter01.CustomMotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/playerMotionLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/playerMotionLayout"
     app:layoutDescription="@xml/fragment_player_scene">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,11 +24,11 @@
         app:layout_constraintEnd_toEndOf="@id/mainContainerLayout"
         app:layout_constraintTop_toTopOf="@id/mainContainerLayout" />
 
-    <ImageView
-        android:background="#00ff00"
+    <com.google.android.exoplayer2.ui.PlayerView
         android:id="@+id/playerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        app:resize_mode="fill"
         app:layout_constraintBottom_toBottomOf="@id/mainContainerLayout"
         app:layout_constraintStart_toStartOf="@id/mainContainerLayout"
         app:layout_constraintTop_toTopOf="@id/mainContainerLayout" />
@@ -48,13 +48,13 @@
         app:layout_constraintTop_toTopOf="@id/bottomPlayerControlButton" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:nestedScrollingEnabled="false"
         android:id="@+id/fragmentRecyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/white"
-        android:padding="16dp"
         android:clipToPadding="false"
+        android:nestedScrollingEnabled="false"
+        android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
